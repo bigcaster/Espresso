@@ -20,11 +20,11 @@ class Example(QMainWindow):
         self.tableWidget.setHorizontalHeaderLabels(title)
         for i, line in enumerate(result):
             self.tableWidget.setRowCount(self.tableWidget.rowCount() + 1)
-            id, name, degree, type, description, price, volume = line
-            self.tableWidget.setItem(i, 0, QTableWidgetItem(str(id)))
+            coffee_id, name, degree, coffee_type, description, price, volume = line
+            self.tableWidget.setItem(i, 0, QTableWidgetItem(str(coffee_id)))
             self.tableWidget.setItem(i, 1, QTableWidgetItem(name))
             self.tableWidget.setItem(i, 2, QTableWidgetItem(degree))
-            self.tableWidget.setItem(i, 3, QTableWidgetItem(type))
+            self.tableWidget.setItem(i, 3, QTableWidgetItem(coffee_type))
             self.tableWidget.setItem(i, 4, QTableWidgetItem(description))
             self.tableWidget.setItem(i, 5, QTableWidgetItem(str(price)))
             self.tableWidget.setItem(i, 6, QTableWidgetItem(volume))
